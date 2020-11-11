@@ -6,7 +6,7 @@
 using namespace std;
 
 // VISITA ANTICIPATA/PREFISSA/PREORDINA
-void prefix(const AlberoB<int>& A)
+void prefix(const AlberoB<bool>& A)
 {
     if(!A.nullo())
     {
@@ -48,11 +48,12 @@ AlberoB<int> ricercaPerLivelli(const AlberoB<int>& A, int x)
     return AlberoB<int>();      // Restituisco un AlberoB vuoto
 }
 
-int main()
-{
+ 
+//int main()
+//{
 
-    /*
-                Voglio rappresentare: 
+   
+  /*              Voglio rappresentare: 
                         42
                 12             2
                     8
@@ -79,7 +80,7 @@ int main()
     B.insFiglio(DES,D);
 
 
-    prefix(A);  */
+    prefix(A);  
 
 
     string temp = "";
@@ -138,3 +139,5 @@ int main()
 
     return 0;
 }
+
+*/

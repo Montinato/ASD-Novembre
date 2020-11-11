@@ -1,0 +1,127 @@
+30 6
+Tianpeng
+DÄsna
+Funtua
+Isfara
+Dickinson
+Klungkung
+Aue
+GyÅ‘r
+Backnang
+RioRico
+Kuningan
+Sarankhola
+Nsukka
+BalmazÃºjvÃ¡ros
+TillmansCorner
+KalamnÅ«ri
+ThakhÃ¨k
+Tianfu
+OkeMesi
+Abbotsford
+SouthRiver
+Wyoming
+MartÃ­nezdelaTorre
+WekiwaSprings
+Ãšbeda
+Roseau
+ElTigre
+Much
+SaintCloud
+Mbeya
+Tianpeng <-> Much
+Tianpeng <-> Roseau
+Tianpeng <-> Sarankhola
+Tianpeng <-> SaintCloud
+DÄsna <-> Dickinson
+Funtua <-> Backnang
+Funtua <-> Tianfu
+Funtua <-> Sarankhola
+Funtua <-> Dickinson
+Funtua <-> MartÃ­nezdelaTorre
+Isfara <-> Ãšbeda
+Isfara <-> Roseau
+Isfara <-> ElTigre
+Isfara <-> Klungkung
+Isfara <-> WekiwaSprings
+Dickinson <-> ThakhÃ¨k
+Dickinson <-> Aue
+Dickinson <-> RioRico
+Dickinson <-> Kuningan
+Dickinson <-> Much
+Dickinson <-> Nsukka
+Dickinson <-> BalmazÃºjvÃ¡ros
+Klungkung <-> OkeMesi
+Klungkung <-> WekiwaSprings
+Klungkung <-> Backnang
+Klungkung <-> Nsukka
+Klungkung <-> KalamnÅ«ri
+Aue <-> Tianfu
+Aue <-> Wyoming
+Aue <-> SouthRiver
+Aue <-> TillmansCorner
+Aue <-> KalamnÅ«ri
+GyÅ‘r <-> Ãšbeda
+GyÅ‘r <-> OkeMesi
+GyÅ‘r <-> Backnang
+GyÅ‘r <-> SaintCloud
+GyÅ‘r <-> Kuningan
+GyÅ‘r <-> Sarankhola
+GyÅ‘r <-> Nsukka
+GyÅ‘r <-> BalmazÃºjvÃ¡ros
+GyÅ‘r <-> Mbeya
+Backnang <-> ThakhÃ¨k
+Backnang <-> Abbotsford
+Backnang <-> MartÃ­nezdelaTorre
+Backnang <-> SaintCloud
+Backnang <-> Kuningan
+Backnang <-> Nsukka
+Backnang <-> Wyoming
+Backnang <-> KalamnÅ«ri
+RioRico <-> ThakhÃ¨k
+RioRico <-> OkeMesi
+RioRico <-> SaintCloud
+RioRico <-> Much
+RioRico <-> Nsukka
+Kuningan <-> Tianfu
+Kuningan <-> MartÃ­nezdelaTorre
+Kuningan <-> Sarankhola
+Kuningan <-> Ãšbeda
+Sarankhola <-> Abbotsford
+Sarankhola <-> Wyoming
+Sarankhola <-> OkeMesi
+Nsukka <-> MartÃ­nezdelaTorre
+Nsukka <-> WekiwaSprings
+Nsukka <-> KalamnÅ«ri
+BalmazÃºjvÃ¡ros <-> Much
+BalmazÃºjvÃ¡ros <-> OkeMesi
+BalmazÃºjvÃ¡ros <-> WekiwaSprings
+KalamnÅ«ri <-> ThakhÃ¨k
+KalamnÅ«ri <-> Tianfu
+KalamnÅ«ri <-> OkeMesi
+KalamnÅ«ri <-> Roseau
+KalamnÅ«ri <-> MartÃ­nezdelaTorre
+KalamnÅ«ri <-> Much
+KalamnÅ«ri <-> SaintCloud
+ThakhÃ¨k <-> WekiwaSprings
+Tianfu <-> Much
+Tianfu <-> Mbeya
+OkeMesi <-> Abbotsford
+OkeMesi <-> Wyoming
+OkeMesi <-> Ãšbeda
+OkeMesi <-> ElTigre
+OkeMesi <-> Much
+OkeMesi <-> Mbeya
+Abbotsford <-> Wyoming
+Abbotsford <-> WekiwaSprings
+Abbotsford <-> Mbeya
+SouthRiver <-> Ãšbeda
+Wyoming <-> MartÃ­nezdelaTorre
+MartÃ­nezdelaTorre <-> ElTigre
+WekiwaSprings <-> Ãšbeda
+WekiwaSprings <-> Much
+Ãšbeda <-> Roseau
+Roseau <-> Much
+ElTigre <-> SaintCloud
+ElTigre <-> Mbeya
+SaintCloud <-> Mbeya
