@@ -80,9 +80,6 @@ int countTrue(const AlberoB<bool>& albero)
         b1 = countTrue(albero.figlio(SIN));
     else
         b1 = 0;
-
-    cout<<"Stampo b1: "<<b1<<endl;
-    cout<<"Iterazione: "<<iter<<endl;
     
 
     if(!albero.figlio(DES).nullo())
@@ -90,19 +87,16 @@ int countTrue(const AlberoB<bool>& albero)
     else
         b2 = 0;
 
-    cout<<"Stampo b2: "<<b2<<endl;
-    cout<<"Iterazione: "<<iter<<endl;
-    iter++;
     
     if(b1 != b2)
     {
-        cout<<"b1: "<<b1<<"b2: "<<b2<<endl;
+       // cout<<"b1: "<<b1<<"b2: "<<b2<<endl;
         return -1;
     }
     
     if(b1 == -1 || b2 == -1)
     {
-        cout<<"b1: "<<b1<<"b2: "<<b2<<endl;
+        // cout<<"b1: "<<b1<<"b2: "<<b2<<endl;
         return -1;
     }
     

@@ -170,7 +170,7 @@ void promozione(const AlberoB<Dipendente>& A,list<Dipendente>& daPromuovere)
 
 
 
-/*int main()
+int main()
 {
     AlberoB<int> A(12);
     AlberoB<int> B(4);
@@ -189,4 +189,4 @@ void promozione(const AlberoB<Dipendente>& A,list<Dipendente>& daPromuovere)
     
     
     return 0;
-}   */
+}   

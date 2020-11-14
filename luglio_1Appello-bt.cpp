@@ -5,104 +5,79 @@
 #include<algorithm>
 using namespace std;
 
-void remove(vector<vector<string>>& sol)    
-{ 
-    //cout<<"Metodo Remove "; 
-    sol.pop_back(); 
-}     // OK
 
-void add(int x,vector<vector<string>>& sol,vector<vector<string>>& S)       // OK
+void add(int& x,vector<vector<string>>& S,vector<vector<string>>& sol)
 {
-    //cout<<"Metodo add, Ho aggiunto alla soluzione l'array di stringhe in posizione: "<<x<<endl;
     sol.push_back(S[x]);
 }
 
-bool canAdd(int x,vector<vector<string>>& sol,vector<vector<string>>& S,int k)  // OK
+bool canAdd(int& x,vector<vector<string>>& S,vector<vector<string>>& sol)
 {
-
-    //cout<<"Metodo canAdd, se non supero k posso aggiungere"<<endl; 
-
     if(sol.empty())
         return true;
+    
+    for(auto y : sol)
+        if(y==S[x])
+            return false;
+
+    return true;
+}
+
+bool isComplete(vector<string>& U,vector<vector<string>>& S,vector<vector<string>>& sol,int& k)
+{
+    list<string> A;
+    list<string> B;
+
+    vector<string> str;
 
     for(int i=0;i<sol.size();i++)
     {
-        if(sol[i] == S[i])
-            return false;
+        for(int j=0;j<sol[i].size();j++)
+            str.push_back(sol[i][j]);
     }
 
-    return sol.size() + 1 <= k;
+
+
+    for(auto x : U)
+        A.push_back(x);
+
+    for(auto x : str)
+        B.push_back(x);
+
+    A.sort();
+    B.sort();
+
+    return (A==B) && sol.size()<=k;
 }
 
-bool isComplete(vector<vector<string>>& sol,vector<string>& U,int k)    // OK
+void remove(vector<vector<string>>& sol)
 {
-   // cout<<"Metodo isComplete "<<endl;
+    sol.pop_back();
+}   
 
-    if(sol.empty())
-        return false;
-    else
-    {
-        vector<string> temp_sol;        // inserisco in un vector temporaneo tutte le stringhe di sol
-        vector<string> temp_U ;        // inserisco un un vector temporaneo le stringhe di U
 
-        for(int i=0;i<U.size();i++)
-            temp_U.push_back(U[i]);
-
-        for(int i=0;i<sol.size();i++)
-        {
-        // cout<<"ENTRO QUA"<<endl;
-            for(int j=0;j<sol[i].size();j++)
-            {
-                //cout<<"INSERISCO IN TEMP_SOL"<<endl;
-                temp_sol.push_back(sol[i][j]);
-            }
-        }
-
-        sort(temp_U.begin(),temp_U.end());
-        sort(temp_sol.begin(),temp_sol.end());
-
-        for(int i=0;i<temp_U.size();i++)
-            if(temp_U[i] != temp_sol[i])
-                return false;
-    }
-            
-    return  true;
-}
-
-bool bt(vector<string>& U, vector<vector<string>>& S,int k,vector<vector<string>>& sol)
+bool bt(vector<string>& U,vector<vector<string>>& S,int& k,vector<vector<string>>& sol)
 {
     int x = 0;
 
-   // cout<<" bt while "<<endl;
-    while( x <= S.size())
+    while(x != S.size())
     {
-      //  cout<<" bt canAdd "<<endl;
-        if(canAdd(x,sol,S,k))
+        if(canAdd(x,S,sol))
         {
-           // cout<<" bt add "<<endl;
-            add(x,sol,S);
+            add(x,S,sol);
 
-           // cout<<" bt isComplete "<<endl;
-            if(isComplete(sol,U,k)) return true;
-           // cout<<" bt richiamo bt "<<endl;
-             if(bt(U,S,k,sol))  return true;
+            if(isComplete(U,S,sol,k)) return true;
+            else if( bt(U,S,k,sol))   return true;
 
-           // cout<<" bt remove "<<endl;
             remove(sol);
-            //cout<<" bt x++ "<<endl;
             x++;
         }
-        else
-        {
-           // cout<<" bt else x++ "<<endl;
+        else 
             x++;
-        }
-        
     }
 
     return false;
 }
-
 int main()
 {
     vector<string> U;
@@ -139,10 +114,7 @@ int main()
   
     vector<vector<string>> sol;
 
-   // sol.push_back(f);
-   //  sol.push_back(h);
-   
-
+ 
     if(bt(U,S,k,sol))
     {
         cout<<"SIUUUU"<<endl;
@@ -161,9 +133,7 @@ int main()
     }   
 
 
-    // A SIMONE FUNZIONA TUTTO, IO HO DEI PROBLEMI SULLA STAMPA DEVO FARE PER BENE IL DEBUG
-
-    
+    // A SIMONE FUNZIONA TUTTO, IO HO DEI PROBLEMI SULLA STAMPA DEVO FARE PER BENE IL DEBUG */
     
     return 0;
 }

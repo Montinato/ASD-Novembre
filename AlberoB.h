@@ -165,7 +165,7 @@ bool bilanciatoProfondo(AlberoB<int> A,int& p)
 }
 
 
-void visitaInfissa(const AlberoB<int> A,list<int>& L)
+/*	void visitaInfissa(const AlberoB<int> A,list<int>& L)
 {
 	if(!A.nullo())
 	{
@@ -173,7 +173,7 @@ void visitaInfissa(const AlberoB<int> A,list<int>& L)
 		L.push_back(A.radice());
 		visitaInfissa(A.figlio(DES),L);
 	}
-}
+}	
 
 bool ricerca(AlberoB<int> A,int value)
 {
@@ -192,5 +192,6 @@ bool ricerca(AlberoB<int> A,int value)
 
 	return false;
 }
+*/
 
 #endif /* ALBEROB_H_ */

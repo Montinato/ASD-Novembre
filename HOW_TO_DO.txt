@@ -1,0 +1,4 @@
+1) Fare l'appello di luglio             OK 
+2) Cercare il secondo appello di settembre e svolgerlo      NON SI TROVA 
+3) Imparare a fare il cammino con i grafi           
+4) Fare esercizi su Alberi,Grafi e Bt
