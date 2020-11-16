@@ -12,6 +12,7 @@ list<int> estremi(AlberoB<int>& A)
     AlberoB<int> temp = A;
 
     estremi.push_back(temp.radice());
+    
     while(true)
     {
         estremi.push_back(temp.figlio(SIN).radice());

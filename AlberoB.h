@@ -119,6 +119,7 @@ int max(int x,int y)
 	return x>y;
 }
 
+//	La profondità di un albero è il massimo livello dei suoi nodi.
 int profondita(AlberoB<int> A)
 {
 	if(A.nullo())
@@ -136,7 +137,11 @@ int profondita(AlberoB<int> A)
 	
 }
 
-// Versione poco efficiente
+/*	Versione poco efficiente
+
+Un albero binario è bilanciato se per ogni nodo la profondità del sottoalbero di destra 
+e la profondità del sottoalbero di sinistra differiscono al più di uno 
+*/
 bool bilanciato(AlberoB<int> A)
 {
 	if(A.nullo())
@@ -145,7 +150,16 @@ bool bilanciato(AlberoB<int> A)
 	return ((abs(profondita(A.figlio(SIN))) - abs(profondita(A.figlio(DES))) <=1) && (bilanciato(A.figlio(SIN)) && bilanciato(A.figlio(DES))));
 }
 
-// Versone piu' efficiente
+/* Versone piu' efficiente
+
+Un albero binario di profondità k è completo se i nodi dei livelli inferiori a k formano un albero pieno 
+( Un nodo/albero che ha ambedue i figli è detto nodo pieno ) e  per ogni nodo il sottoalbero di sinistra ha profondità 
+non minore di quello di destra.  In altre parole in un albero completo tutti i livelli tranne l'ultimo sono riempiti e 
+l'ultimo livello è riempito da sinistra a destra per cui eventuali nodi mancanti sono collocati tutti nella parte destra 
+del livello (vedi Figura 2a).		-> Vale in generale 
+
+La profondità di un albero è il massimo livello dei suoi nodi. 		-> Mi interessa questo 
+*/
 
 bool bilanciatoProfondo(AlberoB<int> A,int& p)
 {

@@ -167,9 +167,6 @@ void promozione(const AlberoB<Dipendente>& A,list<Dipendente>& daPromuovere)
 
 }
 
-
-
-
 int main()
 {
     AlberoB<int> A(12);

@@ -53,7 +53,35 @@ void visitaAnticipata(const AlberoB<T>& A)      // 1, 2, 4, 5, 3, 6, 8, 7, 9    
 // Ho provato a fare la visita per livelli ma non funziona, nemmeno modificando l'implementazione d
 // di ricercaPerLivelli(A,x) di mainAlbero.cpp 
 
+void visitaPerLivelli(const AlberoB<int> & a)
+{
 
+    queue<AlberoB<int>> coda;
+    coda.push(a);
+
+    while(!coda.empty())
+    {
+        AlberoB<int> daValutare = coda.front();
+        coda.pop();
+
+        cout<<daValutare.radice()<<" ";
+
+        if(!daValutare.figlio(SIN).nullo())
+        {
+            coda.push(daValutare.figlio(SIN));
+        }
+        
+        if(!daValutare.figlio(DES).nullo())
+        {
+            coda.push(daValutare.figlio(DES));
+        }
+
+    }
+
+    // NON RIESCO A STAMPARLA 
+}
+
+/*
 int main()
 {
     AlberoB<int> radice(1);
@@ -110,4 +138,4 @@ int main()
 
 
     return 0;
-}
+} */
