@@ -117,39 +117,40 @@ class FunzioniGrafo
         queue<int> q;
         bool visitati[G.n()+1];
 
-        //cout<<endl;
+        // cout<<endl;
         //cout<<endl;
 
-        //cout<<"Setto l'array tutto a false;"<<endl;
+        // cout<<"Setto l'array tutto a false;"<<endl;
         for(int i=0; i<=G.n(); i++)
             visitati[i] = false;
 
-        //cout<<endl;
-        //cout<<endl;
+        // cout<<endl;
+        // cout<<endl;
 
-      //  cout<<"Inserisco il nodo "<<i<<" alla lista e visitati["<<i<<"] diventa true"<<endl;
+        // cout<<"Inserisco il nodo "<<i<<" alla lista e visitati["<<i<<"] diventa true"<<endl;
         q.push(i);
         visitati[i] = true;
 
-       // cout<<endl;
-        //cout<<endl;
+        // cout<<endl;
+        // cout<<endl;
 
-        //cout<<"Finche' la mia lista non e' vuota : "<<endl;
-        //cout<<endl;
+        // cout<<"Finche' la mia lista non e' vuota : "<<endl;
+        // cout<<endl;
+        
         while(!q.empty())
         {
             int x = q.front();
             q.pop();
 
-          //  cout<<"Creo una x ed assegno l'elemento che ho inserito nella lista, quindi "<<x<<endl;
+           // cout<<"Creo una x ed assegno l'elemento che ho inserito nella lista, quindi "<<x<<endl;
             if(x == j){
-               // cout<<"Se la mia x coincide con j che passo alla funzione restituisco true"<<endl;
+             //    cout<<"Se la mia x coincide con j che passo alla funzione restituisco true"<<endl;
                 return true;
             }
-           // cout<<endl;
+            // cout<<endl;
 
            // cout<<"Continuo con il for in cui scorro i nodi del mio grafo"<<endl;
-         //   cout<<endl;
+            // cout<<endl;
 
             /*
                 Se esiste un arco tra x e k, i due nodi sono diversi e k non e' stato visitato, aggiungo a q -> k, e faccio visitato[k] = true;
@@ -158,7 +159,7 @@ class FunzioniGrafo
             {
                 if(G(x, k) && k != x && !visitati[k])
                 {
-                   // cout<<"Esiste l'arco "<<x<<","<<k<<" aggiungo "<<k<<" alla lista q e visitati["<<k<<"] = true"<<endl;
+                //    cout<<"Esiste l'arco "<<x<<","<<k<<" aggiungo "<<k<<" alla lista q e visitati["<<k<<"] = true"<<endl;
                     
                     q.push(k);
                     visitati[k] = true;

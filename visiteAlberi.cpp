@@ -78,7 +78,7 @@ void visitaPerLivelli(const AlberoB<int> & a)
 
     }
 
-    // NON RIESCO A STAMPARLA 
+    // NON RIESCO A STAMPARLA , E' SBAGLIATA 
 }
 
 /*
