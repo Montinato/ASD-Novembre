@@ -9,10 +9,7 @@
 #define ALBEROB_H_
 
 #include <assert.h>
-#include<list>
 #include<algorithm>
-
-using namespace std;
 
 
 enum Direzione { SIN=0, DES=1 };
@@ -111,9 +108,6 @@ class AlberoB
         AC.pradice = pradice->ppadre;
         return AC;
     };
-
 };
-
-
 
 #endif /* ALBEROB_H_ */

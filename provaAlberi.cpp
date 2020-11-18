@@ -1,11 +1,12 @@
 #include"AlberoB.h"
+//  #include"UtilAlbero.h"
 #include<iostream>
 #include<list>
 using namespace std;
 
-int max(int x,int y)    {   return x>y; }
+int Max(int x,int y)    {   return x>y; }
 
-int profondita(AlberoB<int>& A)
+int profondita(AlberoB<int> A)
 {
     if(A.nullo())
         return 0;
@@ -15,10 +16,11 @@ int profondita(AlberoB<int>& A)
     p1 = profondita(A.figlio(SIN));
     p2 = profondita(A.figlio(DES));
 
-    return 1 + max(p1,p2);
+    return 1 + Max(p1,p2);
 }
 
-void visitaAnticipata(AlberoB<int>& A)
+
+void visitaAnticipata(AlberoB<int> A)           // OK FUNZIONA
 {
     if(!A.nullo())
     {
@@ -29,7 +31,7 @@ void visitaAnticipata(AlberoB<int>& A)
     }
 }
 
-void visitaInfissa(AlberoB<int>& A,list<int> lista)
+void visitaInfissa(AlberoB<int> A,list<int> lista)      
 {
     if(!A.nullo())
     {
@@ -38,7 +40,7 @@ void visitaInfissa(AlberoB<int>& A,list<int> lista)
         visitaInfissa(A.figlio(DES),lista);
 
     }
-}
+}   
 
 int main()
 {
@@ -52,6 +54,24 @@ int main()
     A.insFiglio(DES,C);
 
     D.insFiglio(SIN,E);
+
+
+    cout<<profondita(A)<<endl;
+
+    visitaAnticipata(A);
+
+    /*
+    list<int> L;
+    visitaInfissa(A,L);
+
+    cout<<L.size();
+
+    for(auto i=L.begin();i!=L.end();i++)
+        cout<<(*i)<<" ";    */
+
+
+
+    // E' tutto giusto mi da un problema con la classe AlberoB 
     
 
     return 0;
